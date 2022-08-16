@@ -7,7 +7,7 @@ export default function Header() {
     const currentPath = useLocation(); //Nos da el path actual
     const finalCurrentPath = currentPath.pathname.replace("/", ""); 
 
-    const [activeItem, setActiveItem]  = useState("");
+    const [activeItem, setActiveItem]  = useState("inicio");
     const history = useNavigate();
 
     const handleItemClic = (e, {name}) => {
