@@ -1,5 +1,7 @@
 export default function Comics() {
     return(
-        <p>Estamos dentro de comics</p>
+        <div>
+            <p>Estamos dentro de comics</p>
+        </div>
     );
 }
