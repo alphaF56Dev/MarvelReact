@@ -1,9 +1,12 @@
-import Header  from "../components/Header/Header";
+import BestCharacter from "../components/BestCharacter";
+import ListLastEvents from "../components/ListLastEvent";
+
 
 export default function Home() {
     return(
-        <div>
-            <p>Estamos dentro de HOME</p>
+        <div>            
+            <BestCharacter />
+            <ListLastEvents />
         </div>
     );
 }

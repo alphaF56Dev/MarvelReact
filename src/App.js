@@ -6,8 +6,11 @@ import Series from './pages/Series';
 import Error404 from './pages/Error404';
 import 'semantic-ui-css/semantic.min.css';
 import Header from './components/Header/Header';
+import useFetch from './hooks/useFetch';
 
 function App() {
+  const exampleApi = useFetch("http://gateway.marvel.com/v1/public/comics?ts=1&apikey=adfa83662b00b68e35f91adc6bf5bbd4&hash=ec3f87048f8103fcdc97845750eea838");
+  console.log(exampleApi);
   return (
     <div>      
       <Router>
