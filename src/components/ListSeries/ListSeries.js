@@ -1,7 +1,7 @@
 import {Card, Dimmer, Image, Loader, Icon, Button} from 'semantic-ui-react';
 import './ListSeries.scss';
 
-export default function ListSeries({listSeries}) {
+export default function ListSeries({listSeries, limitSeries, setLimitSeries}) {
     const{loading, result} = listSeries;
 
     if(loading || !result){
@@ -10,6 +10,11 @@ export default function ListSeries({listSeries}) {
                 <Loader inverted>Loading ...</Loader>
             </Dimmer>
         );
+    }
+
+    const loadMoreSeries = () =>{
+        const numberSeries = limitSeries;
+        setLimitSeries(numberSeries + 5);
     }
 
     const {results} = result.data;
@@ -46,9 +51,18 @@ export default function ListSeries({listSeries}) {
                                 <Icon name='arrow right'    />
                             </Button.Content>
                         </Button>
-                    </Card.Content>
+                    </Card.Content>                    
                 </Card>
             ))}
+            <div className='container-button'>
+                <Button color='red' onClick={()=>loadMoreSeries()}>
+                    <Button.Content>
+                        <Icon name='plus' />
+                        Mas series
+                    </Button.Content>
+                </Button>
+            </div>
         </Card.Group>
+        
     );
 }
