@@ -1,11 +1,13 @@
-.list-comics{
+.list-characters{
     .header{
         height: 60px;
-        font-size: 16px;
+        font-size: large !important;
+        text-align: center;
+        font-style: italic;
     }
-    
-    .image{
-        height: 250px;
+
+    .image {
+        height: 300px;
         display: flex !important;
     }
 }
